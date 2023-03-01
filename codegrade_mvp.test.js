@@ -12,7 +12,7 @@ describe("fooFunction", () => {
   });
 });
 
-describe("Dosya adını bul", () => {
+describe("Dosya adini bul", () => {
   it("Boş string verilirse boş string dönüyor mu?", () => {
     let sonuc = dosyaAdiniBul("");
     expect(sonuc).toBe("");
@@ -23,12 +23,12 @@ describe("Dosya adını bul", () => {
     expect(sonuc).toBe("Beethoven_5.mp3");
   });
 
-  it("Standart inputla doğru çıktıyı üretiyor mu?", () => {
+  it("Standart inputla doğru çiktiyi üretiyor mu?", () => {
     let sonuc = dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3");
     expect(sonuc).toBe("Beethoven_5.mp3");
   });
 
-  it("Başka standart bir inputla doğru çıktıyı üretiyor mu?", () => {
+  it("Başka standart bir inputla doğru çiktiyi üretiyor mu?", () => {
     let sonuc = dosyaAdiniBul(
       "D:/Users/johnsmith/Documents/VestibulumQuam.txt"
     );
@@ -42,17 +42,17 @@ describe("Ortalama bul", () => {
     expect(sonuc).toBe(null);
   });
 
-  it("Tek bir sayı varsa aynı sayı dönüyor mu?", () => {
+  it("Tek bir sayi varsa ayni sayi dönüyor mu?", () => {
     let sonuc = ortalamaBul([4]);
     expect(sonuc).toBe(4);
   });
 
-  it("Az sayıda elemanla doğru sonucu üretiyor mu?", () => {
+  it("Az sayida elemanla doğru sonucu üretiyor mu?", () => {
     let sonuc = ortalamaBul([50, -26, 153, 7]);
     expect(sonuc).toBe(46);
   });
 
-  it("Çok sayıda elemanla doğru sonucu bekletmeden üretiyor mu?", () => {
+  it("Çok sayida elemanla doğru sonucu bekletmeden üretiyor mu?", () => {
     let sonuc = ortalamaBul(numbers);
     expect(sonuc).toBe(9831);
   });
@@ -64,17 +64,17 @@ describe("Ortalamadan büyükleri bul", () => {
     expect(sonuc).toBe(null);
   });
 
-  it("Tek bir sayı varsa aynı sayıyı içeren bir array dönüyor mu?", () => {
+  it("Tek bir sayi varsa ayni sayiyi içeren bir array dönüyor mu?", () => {
     let sonuc = ortalamadanBuyukleriBul([4], ortalamaBul);
     expect(sonuc).toStrictEqual([4]);
   });
 
-  it("Az sayıda elemanla doğru sonucu üretiyor mu?", () => {
+  it("Az sayida elemanla doğru sonucu üretiyor mu?", () => {
     let sonuc = ortalamadanBuyukleriBul([50, -26, 153, 7], ortalamaBul);
     expect(sonuc).toStrictEqual([50, 153]);
   });
 
-  it("Çok sayıda elemanla doğru sonucu bekletmeden üretiyor mu?", () => {
+  it("Çok sayida elemanla doğru sonucu bekletmeden üretiyor mu?", () => {
     let sonuc = ortalamadanBuyukleriBul(numbers, ortalamaBul);
     expect(sonuc).toStrictEqual([9978, 9908, 2480599, 9894, 9998]);
   });
